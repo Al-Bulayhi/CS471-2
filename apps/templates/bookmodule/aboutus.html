@@ -1,3 +1,7 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block title %} My First Index HTML Page {% endblock title %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +13,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
-        <div class="topnav"> <!-- add class attribute -->
-            <a href="index.html">Home</a>
-            <a href="list_books.html">List Books</a>
-            <a class="active" href="aboutus.html">About</a>
-            </div>
-    <a href="index.html">Home</a>
-    <a href="list_books.html">List Books</a>
-    <a href="aboutus.html">About</a>
+  
     <h1>About us</h1>
     <p>This is a paragraph text This is a paragraph text This is a paragraph text
     This is a paragraph text </p>
@@ -24,3 +21,4 @@
     and your default email client will open an email message and address it to us. </p>
 </body>
 </html>
+{% endblock content %}
