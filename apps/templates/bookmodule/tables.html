@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Tables</title>
+</head>
+<body>
+    <h1>Table 1: Table of Fruits and Their Prices</h1>
+    <table border="1">
+        <tr>
+            <th>Fruit</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>$0.25</td>
+        </tr>
+        <tr>
+            <td>Orange</td>
+            <td>$0.50</td>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>$1.00</td>
+        </tr>
+        <tr>
+            <td>Pineapple</td>
+            <td>$2.00</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>$3.75</td>
+        </tr>
+    </table>
+
+    <h1>Table 2: A more complex sample table</h1>
+    <table border="1">
+        <tr rowspan ="4">
+            <td rowspan="1">
+                <img src="{% static 'desert.jpg' %}" alt="Desert" width="300">
+            </td>
+            <th colspan="4">Camelid comparison<br>Approximate as of 6/2011</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th># of humps</th>
+            <th>Indigenous region</th>
+            <th>Spits?</th>
+            <th>Produces wool?</th>
+        </tr>
+        <tr>
+            <td>dromedery</td>
+            <td>1</td>
+            <td>Arabian Peninsula</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Camels(bactrian)</td>
+            <td>2</td>
+            <td>Africa/Asia</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Lamas</td>
+            <td>1</td>
+            <td>Andes Mountains</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            
+        </tr>
+    </table>
+
+</body>
+</html>

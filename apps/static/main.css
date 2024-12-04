@@ -1,0 +1,116 @@
+/* General styles for the link container */
+.link-container {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Style for all links */
+a {
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Link states */
+a:link {
+    color: red;
+    background-color: #b2fab4; /* light green */
+}
+
+a:visited {
+    color: yellow;
+    background-color: #4a4a4a; /* dark gray */
+}
+
+a:hover {
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+a:active {
+    color: orange;
+    background-color: #222222;
+}
+
+/* Specific styles for classes */
+a.new-tab {
+    font-weight: bold;
+    background-color: #b2fab4;
+    color: red;
+}
+
+a.same-tab {
+    font-style: italic;
+    color: orange;
+    background-color: #4a4a4a;
+}
+
+#id-same-tab {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1.blue_header {
+    color: rgb(242, 245, 248);
+    background-color: #5c9ead;
+    padding: 15px;
+    font-family: Georgia, serif;
+}
+
+/* Styling for the h1 tag */
+h1.green_header {
+    color: green;
+    background-color: #f7f7d1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* Styling for <mark> */
+mark {
+    background-color: yellow;
+    color: black;
+}
+
+/* Styling for the h1 tag */
+
+/* Styling for unordered lists */
+ul {
+    margin: 15px;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for ordered lists */
+ol {
+    margin-left: 30px;
+    list-style-type: decimal;
+}
+
+/* Nested list styling */
+ul ul, ul ol {
+    margin-left: 20px;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ul ol {
+    list-style-type: decimal;
+}
+

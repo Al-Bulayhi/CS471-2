@@ -10,6 +10,11 @@ urlpatterns = [
     path('simple/query/', views.simple_query, name='simple_query'),
     path('complex/query/', views.complex_query, name='complex_query'),
 
+    path('html5/links', views.links_page, name='links_page'),
+    path('html5/text/formatting', views.text_formatting, name='text_formatting'),
+    path('html5/listing', views.nested_listing, name='nested_listing'),
+    path('html5/tables/', views.tables_view, name='tables'),
+
     path('lab8/task1', views.task1_view, name='lab8_task1'),
     path('lab8/task2', views.task2_view, name='lab8_task2'),
     path('lab8/task3', views.task3_view, name='lab8_task3'),

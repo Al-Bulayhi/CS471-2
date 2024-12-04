@@ -76,6 +76,18 @@ def complex_query(request):
     else:
         return render(request, 'bookmodule/index.html')
     
+def links_page(request):
+    return render(request, 'bookmodule/links.html')
+
+def text_formatting(request):
+    return render(request, 'bookmodule/text_formatting.html')
+
+def nested_listing(request):
+    return render(request, 'bookmodule/nested_listing.html')
+
+def tables_view(request):
+    return render(request, 'bookmodule/tables.html')
+    
 def task1_view(request):
     # Get books with price <= 50
     books = Book.objects.filter(Q(price__lte=50))
