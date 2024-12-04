@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %}
+
+<div class="container">
+    <h2>Add new Book</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div class="form-group">
+            <input type="submit" value="Save Changes" required min="0">
+        </div>
+    </form>
+</div>
+{% endblock content %}

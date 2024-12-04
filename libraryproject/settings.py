@@ -29,6 +29,9 @@ ALLOWED_HOSTS = []
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+MEDIA_URL = '/media/'  # Public URL for media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory for uploaded media files
+
 # Application definition
 
 INSTALLED_APPS = [

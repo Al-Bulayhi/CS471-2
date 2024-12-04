@@ -1,0 +1,33 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block title %} My First Index HTML Page {% endblock title %}
+{% block content %}
+
+<h1>Book List</h1>
+    <a href="{% url 'add_book2' %}" class="add-button">Add new Book</a>
+    {% if books %}
+        <ul>
+            {% for book in books %}
+                <li>
+                    <strong>{{ book.title }}</strong><br>
+                    ID: {{ book.id }}<br>
+                    Author: {{ book.author }}<br>
+                    Edition: {{ book.edition }}<br>
+                    Price: {{ book.price }}<br>
+                    <form action="{% url 'edit_book2' id=book.id %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="id" value="{{ book.id }}">
+                        <button type="submit" style="background-color: #f59842;margin-bottom: 10px;margin-top: 5px">Edit</button>
+                    </form>
+
+                    <form action="{% url 'delete_book2' id=book.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" style="background-color: #f54242">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No books found matching your criteria.</p>
+    {% endif %}
+{% endblock content %}

@@ -1,10 +1,21 @@
 {% extends "layouts/base.html" %}
-{% load static %}
-{% block title %} My First Index HTML Page {% endblock title %}
+
 {% block content %}
-<h4>ID: {{ book.id }}</h4>
-<h4>Title: {{ book.title }}</h4>
-<h4>Authors</h4>
-<p>{{ book.author }}</p>
-<h4>Description</h4>
-<p>Description here</p>
+<h1>Book List</h1>
+
+    {% if books %}
+        <ul>
+            {% for book in books %}
+                <li>
+                    <strong>{{ book.title }}</strong><br>
+                    ID: {{ book.id }}<br>
+                    Author: {{ book.author }}<br>
+                    Edition: {{ book.edition }}<br>
+                    Price: ${{ book.price }}<br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No books found matching your criteria.</p>
+    {% endif %}
+{% endblock content %}

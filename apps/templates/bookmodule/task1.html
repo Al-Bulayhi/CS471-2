@@ -1,0 +1,29 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}Books with Price <= 50{% endblock title %}
+
+{% block content %}
+<h1>Books with Price ≤ 50</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Edition</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.price }}</td>
+        <td>{{ book.edition }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% if not books %}
+<p>No books found with price ≤ 50.</p>
+{% endif %}
+{% endblock content %}

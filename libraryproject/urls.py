@@ -16,9 +16,11 @@ Including another URLconf
 """
 import apps.bookmodule.views
 import apps.usermodule.views
-
+from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +30,7 @@ urlpatterns = [
     path('list_books/', apps.bookmodule.views.list_books, name= "books.list_books"),
     path('<int:bookId>/', apps.bookmodule.views.viewbook, name="books.view_one_book"),
     path('aboutus/', apps.bookmodule.views.aboutus, name="books.aboutus"),
-    
+    path('books/', include('apps.bookmodule.urls')),  # Include bookmodule URLs
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<h1>Image List</h1>
+    <a class="red-button" href="{% url 'users.logout_user' %}" >Logout</a>
+    <a href="{% url 'books.addimage' %}" class="add-button">Add new Image</a>
+    {% if images %}
+        <ul>
+            {% for image in images %}
+                <li>
+                    <img src="{{ image.coverPage.url }}" alt="Image">
+                    <form action="{% url 'books.deleteimage' id=image.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" style="background-color: #f54242">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Images found matching your criteria.</p>
+    {% endif %}
+{% endblock content %}
